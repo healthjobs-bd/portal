@@ -1,28 +1,32 @@
-/* Add this to your style.css */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
 header {
     background: #333;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
 }
 
 .search-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 0; /* Joins input and button */
-    margin: 40px 0;
+    margin: 40px auto;
+    max-width: 600px;
 }
 
 .search-input {
-    width: 400px;
+    flex: 1;
     padding: 15px 20px;
     font-size: 16px;
     border: 2px solid #ddd;
     border-right: none;
-    border-radius: 30px 0 0 30px; /* Rounded left side */
+    border-radius: 30px 0 0 30px;
     outline: none;
-    transition: border-color 0.3s;
 }
 
 .search-input:focus {
@@ -36,27 +40,20 @@ header {
     color: white;
     background-color: #0072bc;
     border: 2px solid #0072bc;
-    border-radius: 0 30px 30px 0; /* Rounded right side */
+    border-radius: 0 30px 30px 0;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth animation */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-/* INTERACTIVE STATES */
 .search-button:hover {
     background-color: #005a96;
-    transform: scale(1.05); /* Makes the button slightly larger on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
-.search-button:active {
-    transform: scale(0.98); /* "Clicks" inward when pressed */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.job-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .job-card {
@@ -65,39 +62,26 @@ body {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    transition: transform 0.2s, box-shadow 0.2s; /* The 'Interactive' feel */
+    transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .job-card:hover {
-    transform: translateY(-5px); /* Card lifts up when hovered */
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    border-color: #0072bc;
 }
 
-.view-details-btn {
+.apply-btn {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 10px 20px;
     background-color: #0072bc;
     color: white !important;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
 }
 
-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    line-height: 1.6;
-}
-h2:hover {
-    color: #0072bc;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-ul {
-    list-style-type: square;
+.apply-btn:hover {
+    background-color: #005a96;
 }
