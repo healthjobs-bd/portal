@@ -27,6 +27,6 @@ button.addEventListener('click', () => {
         }
     }
     
-    // Optional: Make it search instantly while typing
-    document.getElementById('jobSearchInput').addEventListener('keyup', performSearch);
-    </script>
+// Optional: Make it search instantly while typing
+document.getElementById('jobSearchInput').addEventListener('keyup', performSearch);
+</script>
