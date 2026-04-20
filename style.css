@@ -19,7 +19,7 @@ section {
     line-height: 1.6; /* Makes text easier to read */
 }
 
-h2 {
+h2:hover {
     color: #0072bc;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
