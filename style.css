@@ -13,10 +13,8 @@ body {
 }
 
 section {
-    max-width: 800px;
-    margin: 20px auto; /* Centers the content */
-    padding: 20px;
-    line-height: 1.6; /* Makes text easier to read */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #fff;
 }
 
 h2:hover {
