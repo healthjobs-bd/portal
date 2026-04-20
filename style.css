@@ -13,10 +13,11 @@ body {
 }
 
 section {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    line-height: 1.6;
 }
-
 h2:hover {
     color: #0072bc;
     border-bottom: 2px solid #eee;
