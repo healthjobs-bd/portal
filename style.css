@@ -12,6 +12,33 @@ body {
     padding: 0;
 }
 
+.job-card {
+    background: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s; /* The 'Interactive' feel */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.job-card:hover {
+    transform: translateY(-5px); /* Card lifts up when hovered */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-color: #0072bc;
+}
+
+.view-details-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0072bc;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 section {
     max-width: 800px;
     margin: 20px auto;
