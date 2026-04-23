@@ -1,8 +1,14 @@
+/* 1. Add this at the very top to fix layout sizing */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    overflow-x: hidden; /* Prevents horizontal scrolling on mobile */
 }
 
 header {
@@ -16,7 +22,8 @@ header {
     display: flex;
     justify-content: center;
     margin: 40px auto;
-    max-width: 600px;
+    width: 90%;          /* Uses 90% of the screen on small devices */
+    max-width: 600px;    /* But never grows larger than 600px */
 }
 
 .search-input {
@@ -27,6 +34,7 @@ header {
     border-right: none;
     border-radius: 30px 0 0 30px;
     outline: none;
+    min-width: 0;        /* Prevents input from pushing past container */
 }
 
 .search-input:focus {
@@ -34,8 +42,8 @@ header {
 }
 
 .search-button {
-    padding: 15px 35px;
-    font-size: 18px;
+    padding: 15px 25px;   /* Slightly reduced side padding for mobile */
+    font-size: 16px;      /* Slightly smaller font for mobile fit */
     font-weight: bold;
     color: white;
     background-color: #0072bc;
@@ -43,6 +51,7 @@ header {
     border-radius: 0 30px 30px 0;
     cursor: pointer;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Keeps text on one line */
 }
 
 .search-button:hover {
@@ -51,9 +60,10 @@ header {
 }
 
 .job-list {
+    width: 95%;           /* Gives a little breathing room on the edges */
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;        /* Reduced padding for smaller screens */
 }
 
 .job-card {
@@ -64,6 +74,7 @@ header {
     margin-bottom: 20px;
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    max-width: 100%;      /* Ensures cards never exceed screen width */
 }
 
 .job-card:hover {
@@ -80,8 +91,23 @@ header {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
+    max-width: 100%;      /* Button stays within card boundaries */
 }
 
 .apply-btn:hover {
     background-color: #005a96;
+}
+
+/* 3. Handle very small screens (phones) */
+@media (max-width: 480px) {
+    .search-container {
+        flex-direction: column; /* Stack input and button if it's too tight */
+        gap: 10px;
+    }
+    
+    .search-input, .search-button {
+        border-radius: 30px;    /* Make them both rounded pills */
+        border-right: 2px solid #ddd;
+        width: 100%;
+    }
 }
